@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Signal Reader</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #data { font-size: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Arduino Signal Reader</h1>
+  <p>Signal value: <span id="data">Waiting for data...</span></p>
+
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+
+    ws.onmessage = function(event) {
+      document.getElementById('data').textContent = event.data;
+    };
+
+    ws.onopen = function() {
+      console.log('Connected to WebSocket server');
+    };
+
+    ws.onclose = function() {
+      console.log('Disconnected from WebSocket server');
+    };
+  </script>
+</body>
+</html>
