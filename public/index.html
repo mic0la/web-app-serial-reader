@@ -5,13 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arduino Signal Reader</title>
   <style>
-    body { font-family: Arial, sans-serif; }
     #data { font-size: 2em; }
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .value {
+        font-size: 2em;
+        color: #007bff;
+    }
   </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <h1>Arduino Signal Reader</h1>
-  <p>Signal value: <span id="data">Waiting for data...</span></p>
+<body> 
+  <div class="container">
+    <h1>Arduino Signal Reader</h1>
+    <p>Signal value: <span id="data" class = 'value'>Waiting for data...</span></p>
+  </div>
 
   <script>
     const ws = new WebSocket('ws://localhost:8080');
