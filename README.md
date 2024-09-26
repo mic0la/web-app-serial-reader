@@ -1,5 +1,6 @@
 # web-app-serial-reader
-reading data from arduino/esp controllers
+reading data from arduino/esp controllers <br />
+AKA digital shadow
 
 ## how to use
 copy the repo <br />
