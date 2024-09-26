@@ -20,7 +20,7 @@ wss.on('connection', (ws) => {
 });
 
 // Setup serial communication
-const arduinoPort = new SerialPort({ path: 'COM10',baudRate: 9600 });
+const arduinoPort = new SerialPort({ path: 'COM10',baudRate: 9600 }); // Change COM10 to your path
 const parser = arduinoPort.pipe(new ReadlineParser({ delimiter: '\r\n' }));
 
 // Read data from Arduino and send to WebSocket clients
