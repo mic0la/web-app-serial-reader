@@ -9,6 +9,7 @@ AKA digital shadow
 ## how to deploy (without DB)
 > [!OPTIONAL]
 > upload example.ino to your controller(make sure, you connected right PIN)
+
 copy the repo <br />
 change your path in `app.js` to ports (in my case `'COM10'`) <br />
 `npm i` to install dependencies <br />
@@ -17,6 +18,7 @@ change your path in `app.js` to ports (in my case `'COM10'`) <br />
 ## how to deploy (with DB)
 > [!OPTIONAL]
 > upload example.ino to your controller(make sure, you connected right PIN)
+
 copy the repo <br />
 change your path in `newapp.js` to ports (in my case `'COM10'`) <br />
 type `npm i` to install dependencies <br />
