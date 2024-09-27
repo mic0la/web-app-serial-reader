@@ -2,13 +2,21 @@
 reading data from arduino/esp controllers <br />
 AKA digital shadow
 
+# requirements
+- NODE.js
+- DHT22 sensor connected to arduino/esp
+
 ## how to deploy (without DB)
+> [!OPTIONAL]
+> upload example.ino to your controller(make sure, you connected right PIN)
 copy the repo <br />
 change your path in `app.js` to ports (in my case `'COM10'`) <br />
 `npm i` to install dependencies <br />
 `npm start` to run the application http://localhost:3000 <br />
 
 ## how to deploy (with DB)
+> [!OPTIONAL]
+> upload example.ino to your controller(make sure, you connected right PIN)
 copy the repo <br />
 change your path in `newapp.js` to ports (in my case `'COM10'`) <br />
 type `npm i` to install dependencies <br />
