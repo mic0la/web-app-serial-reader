@@ -36,14 +36,19 @@
 <body> 
   <div class="container">
     <h1>Arduino Signal Reader</h1>
-    <p>Signal value: <span id="data" class = 'value'>Waiting for data...</span></p>
+    <p>Reveived values count: <span id="counter" class = 'value'>Waiting for data...</span></p>
+    <p>Last signal value: <span id="data" class = 'value'>Waiting for data...</span></p>
   </div>
 
   <script>
     const ws = new WebSocket('ws://localhost:8080');
 
+    let sum = 0;
+
     ws.onmessage = function(event) {
       document.getElementById('data').textContent = event.data;
+      document.getElementById('counter').textContent = sum
+      sum++
     };
 
     ws.onopen = function() {
